@@ -16,7 +16,7 @@ CXX           = g++
 DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -DMINGW_HAS_SECURE_API=1 -DQT_DEPRECATED_WARNINGS -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 -DQT_QML_DEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_NEEDS_QMAIN
 CFLAGS        = -fno-keep-inline-dllexport -O2 -Wall -Wextra -Wextra $(DEFINES)
 CXXFLAGS      = -fno-keep-inline-dllexport -Wall -O2 -O2 -std=gnu++1z -Wall -Wextra -Wextra -fexceptions -mthreads $(DEFINES)
-INCPATH       = -I../../../20250915085750 -I. -I../../../20250915085750 -IE:/Qt/6.9.0/mingw_64/include -IE:/Qt/6.9.0/mingw_64/include/QtWidgets -IE:/Qt/6.9.0/mingw_64/include/QtGui -IE:/Qt/6.9.0/mingw_64/include/QtCore -Irelease/moc -Irelease/ui -I/include -IE:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ 
+INCPATH       = -I../../../ImageHelper -I. -I../../../ImageHelper -IE:/Qt/6.9.0/mingw_64/include -IE:/Qt/6.9.0/mingw_64/include/QtWidgets -IE:/Qt/6.9.0/mingw_64/include/QtGui -IE:/Qt/6.9.0/mingw_64/include/QtCore -Irelease/moc -Irelease/ui -I/include -IE:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -Wl,-s -Wl,-subsystem,windows -mthreads
 LIBS        =        E:\Qt\6.9.0\mingw_64\lib\libQt6Widgets.a E:\Qt\6.9.0\mingw_64\lib\libQt6Gui.a E:\Qt\6.9.0\mingw_64\lib\libQt6Core.a release\obj\ImageProcessor_resource_res.o -lmingw32 E:\Qt\6.9.0\mingw_64\lib\libQt6EntryPoint.a -lshell32  
@@ -409,9 +409,10 @@ release/moc/moc_mainwindow.cpp: ../../mainwindow.h \
 		E:/Qt/6.9.0/mingw_64/include/QtGui/QMouseEvent \
 		E:/Qt/6.9.0/mingw_64/include/QtGui/QWheelEvent \
 		E:/Qt/6.9.0/mingw_64/include/QtCore/QPoint \
+		E:/Qt/6.9.0/mingw_64/include/QtCore/QDateTime \
 		release/moc/moc_predefs.h \
 		E:/Qt/6.9.0/mingw_64/bin/moc.exe
-	E:\Qt\6.9.0\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Admin/CodeBuddy/20250915085750/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/release/moc/moc_predefs.h -IE:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -IC:/Users/Admin/CodeBuddy/20250915085750 -IC:/Users/Admin/CodeBuddy/20250915085750 -IE:/Qt/6.9.0/mingw_64/include -IE:/Qt/6.9.0/mingw_64/include/QtWidgets -IE:/Qt/6.9.0/mingw_64/include/QtGui -IE:/Qt/6.9.0/mingw_64/include/QtCore -I. -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IE:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\mainwindow.h -o release\moc\moc_mainwindow.cpp
+	E:\Qt\6.9.0\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Admin/Documents/GitHub/ImageHelper/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/release/moc/moc_predefs.h -IE:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -IC:/Users/Admin/Documents/GitHub/ImageHelper -IC:/Users/Admin/Documents/GitHub/ImageHelper -IE:/Qt/6.9.0/mingw_64/include -IE:/Qt/6.9.0/mingw_64/include/QtWidgets -IE:/Qt/6.9.0/mingw_64/include/QtGui -IE:/Qt/6.9.0/mingw_64/include/QtCore -I. -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IE:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\mainwindow.h -o release\moc\moc_mainwindow.cpp
 
 release/moc/moc_imageprocessor.cpp: ../../imageprocessor.h \
 		E:/Qt/6.9.0/mingw_64/include/QtCore/QObject \
@@ -612,7 +613,7 @@ release/moc/moc_imageprocessor.cpp: ../../imageprocessor.h \
 		E:/Qt/6.9.0/mingw_64/include/QtCore/qtimer.h \
 		release/moc/moc_predefs.h \
 		E:/Qt/6.9.0/mingw_64/bin/moc.exe
-	E:\Qt\6.9.0\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Admin/CodeBuddy/20250915085750/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/release/moc/moc_predefs.h -IE:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -IC:/Users/Admin/CodeBuddy/20250915085750 -IC:/Users/Admin/CodeBuddy/20250915085750 -IE:/Qt/6.9.0/mingw_64/include -IE:/Qt/6.9.0/mingw_64/include/QtWidgets -IE:/Qt/6.9.0/mingw_64/include/QtGui -IE:/Qt/6.9.0/mingw_64/include/QtCore -I. -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IE:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\imageprocessor.h -o release\moc\moc_imageprocessor.cpp
+	E:\Qt\6.9.0\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Admin/Documents/GitHub/ImageHelper/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/release/moc/moc_predefs.h -IE:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -IC:/Users/Admin/Documents/GitHub/ImageHelper -IC:/Users/Admin/Documents/GitHub/ImageHelper -IE:/Qt/6.9.0/mingw_64/include -IE:/Qt/6.9.0/mingw_64/include/QtWidgets -IE:/Qt/6.9.0/mingw_64/include/QtGui -IE:/Qt/6.9.0/mingw_64/include/QtCore -I. -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IE:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\imageprocessor.h -o release\moc\moc_imageprocessor.cpp
 
 release/moc/moc_imageviewer.cpp: ../../imageviewer.h \
 		E:/Qt/6.9.0/mingw_64/include/QtWidgets/QWidget \
@@ -824,9 +825,12 @@ release/moc/moc_imageviewer.cpp: ../../imageviewer.h \
 		E:/Qt/6.9.0/mingw_64/include/QtGui/QMouseEvent \
 		E:/Qt/6.9.0/mingw_64/include/QtGui/QWheelEvent \
 		E:/Qt/6.9.0/mingw_64/include/QtCore/QPoint \
+		E:/Qt/6.9.0/mingw_64/include/QtCore/QDateTime \
+		E:/Qt/6.9.0/mingw_64/include/QtCore/qdatetime.h \
+		E:/Qt/6.9.0/mingw_64/include/QtCore/qcalendar.h \
 		release/moc/moc_predefs.h \
 		E:/Qt/6.9.0/mingw_64/bin/moc.exe
-	E:\Qt\6.9.0\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Admin/CodeBuddy/20250915085750/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/release/moc/moc_predefs.h -IE:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -IC:/Users/Admin/CodeBuddy/20250915085750 -IC:/Users/Admin/CodeBuddy/20250915085750 -IE:/Qt/6.9.0/mingw_64/include -IE:/Qt/6.9.0/mingw_64/include/QtWidgets -IE:/Qt/6.9.0/mingw_64/include/QtGui -IE:/Qt/6.9.0/mingw_64/include/QtCore -I. -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IE:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\imageviewer.h -o release\moc\moc_imageviewer.cpp
+	E:\Qt\6.9.0\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/Admin/Documents/GitHub/ImageHelper/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/release/moc/moc_predefs.h -IE:/Qt/6.9.0/mingw_64/mkspecs/win32-g++ -IC:/Users/Admin/Documents/GitHub/ImageHelper -IC:/Users/Admin/Documents/GitHub/ImageHelper -IE:/Qt/6.9.0/mingw_64/include -IE:/Qt/6.9.0/mingw_64/include/QtWidgets -IE:/Qt/6.9.0/mingw_64/include/QtGui -IE:/Qt/6.9.0/mingw_64/include/QtCore -I. -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IE:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IE:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\imageviewer.h -o release\moc\moc_imageviewer.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1135,7 +1139,8 @@ release/obj/main.o: ../../main.cpp E:/Qt/6.9.0/mingw_64/include/QtWidgets/QAppli
 		E:/Qt/6.9.0/mingw_64/include/QtWidgets/QWidget \
 		E:/Qt/6.9.0/mingw_64/include/QtGui/QMouseEvent \
 		E:/Qt/6.9.0/mingw_64/include/QtGui/QWheelEvent \
-		E:/Qt/6.9.0/mingw_64/include/QtCore/QPoint
+		E:/Qt/6.9.0/mingw_64/include/QtCore/QPoint \
+		E:/Qt/6.9.0/mingw_64/include/QtCore/QDateTime
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\obj\main.o ..\..\main.cpp
 
 release/obj/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
@@ -1423,6 +1428,7 @@ release/obj/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		E:/Qt/6.9.0/mingw_64/include/QtGui/QMouseEvent \
 		E:/Qt/6.9.0/mingw_64/include/QtGui/QWheelEvent \
 		E:/Qt/6.9.0/mingw_64/include/QtCore/QPoint \
+		E:/Qt/6.9.0/mingw_64/include/QtCore/QDateTime \
 		release/ui/ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\obj\mainwindow.o ..\..\mainwindow.cpp
 
@@ -1846,12 +1852,9 @@ release/obj/imageviewer.o: ../../imageviewer.cpp ../../imageviewer.h \
 		E:/Qt/6.9.0/mingw_64/include/QtGui/QMouseEvent \
 		E:/Qt/6.9.0/mingw_64/include/QtGui/QWheelEvent \
 		E:/Qt/6.9.0/mingw_64/include/QtCore/QPoint \
-		E:/Qt/6.9.0/mingw_64/include/QtWidgets/QApplication \
-		E:/Qt/6.9.0/mingw_64/include/QtWidgets/qapplication.h \
-		E:/Qt/6.9.0/mingw_64/include/QtWidgets/QScrollBar \
-		E:/Qt/6.9.0/mingw_64/include/QtWidgets/qscrollbar.h \
-		E:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractslider.h \
-		E:/Qt/6.9.0/mingw_64/include/QtCore/QDebug \
+		E:/Qt/6.9.0/mingw_64/include/QtCore/QDateTime \
+		E:/Qt/6.9.0/mingw_64/include/QtCore/qdatetime.h \
+		E:/Qt/6.9.0/mingw_64/include/QtCore/qcalendar.h \
 		E:/Qt/6.9.0/mingw_64/include/QtGui/QPainter \
 		E:/Qt/6.9.0/mingw_64/include/QtGui/qpainter.h \
 		E:/Qt/6.9.0/mingw_64/include/QtGui/qtextoption.h \

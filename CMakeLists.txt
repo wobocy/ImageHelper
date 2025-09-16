@@ -12,11 +12,13 @@ set(SOURCES
     main.cpp
     mainwindow.cpp
     imageprocessor.cpp
+    imageviewer.cpp
 )
 
 set(HEADERS
     mainwindow.h
     imageprocessor.h
+    imageviewer.h
 )
 
 qt6_add_executable(ImageProcessor ${SOURCES} ${HEADERS})
